@@ -1,21 +1,20 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const inputText = ref("")
-
+const inputText = ref('')
 </script>
-
 
 <template>
   <!-- сюда добавить addTask, v-model для textЮ чтобы передавать введенное название task -->
-  <div  class="header">
+  <div class="header">
     <input type="text" v-model="inputText" class="input" placeholder="Add a new task" />
-    <button @click="$emit('addTask', inputText)" type="button" class="button"><img src="../assets/plus-icon.png" alt=""></button>
+    <button @click="$emit('addTask', inputText)" type="button" class="button">
+      <img src="../assets/plus-icon.png" alt="" />
+    </button>
   </div>
-</template> 
+</template>
 
 <style scoped>
-
 .header {
   display: flex;
 }
@@ -24,10 +23,10 @@ const inputText = ref("")
   width: 375px;
   height: 40px;
   margin-right: 10px;
-  border: 1px solid #3E1671;
+  border: 1px solid #3e1671;
   background: none;
   padding-left: 14px;
-  color: #9E78CF;
+  color: #9e78cf;
   box-sizing: border-box;
 }
 
@@ -36,9 +35,9 @@ const inputText = ref("")
 }
 
 .button {
-  background-color: #9E78CF;
+  background-color: #9e78cf;
   /* background: url(..assets/plus-icon.png) center no-repeat; */
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   width: 40px;
   height: 40px;
@@ -48,5 +47,4 @@ const inputText = ref("")
 /* .input {
   opacity: 0%;
 } */
-
 </style>
